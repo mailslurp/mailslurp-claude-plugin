@@ -1,0 +1,16 @@
+{
+  "author": {
+    "name": "MailSlurp",
+    "url": "https://www.mailslurp.com"
+  },
+  "description": "Connect MailSlurp email, SMS and email-testing infrastructure to AI workflows.",
+  "documentationUrl": "https://www.mailslurp.com/docs/mcp/",
+  "homepage": "https://www.mailslurp.com/docs/agents/",
+  "icon": "./assets/icon.png",
+  "license": "MIT",
+  "name": "mailslurp",
+  "privacyPolicyUrl": "https://www.mailslurp.com/privacy/",
+  "supportUrl": "https://www.mailslurp.com/support/",
+  "termsOfServiceUrl": "https://www.mailslurp.com/full-terms-and-conditions/",
+  "version": "0.1.0"
+}

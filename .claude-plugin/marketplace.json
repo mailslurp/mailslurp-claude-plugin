@@ -1,0 +1,17 @@
+{
+  "name": "mailslurp",
+  "owner": {
+    "name": "MailSlurp",
+    "url": "https://www.mailslurp.com"
+  },
+  "metadata": {
+    "description": "The MailSlurp plugin for Claude: email and SMS testing, email rendering and inbox placement."
+  },
+  "plugins": [
+    {
+      "name": "mailslurp",
+      "source": "./",
+      "description": "Connect MailSlurp email, SMS and email-testing infrastructure to AI workflows."
+    }
+  ]
+}
