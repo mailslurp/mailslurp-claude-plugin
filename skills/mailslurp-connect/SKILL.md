@@ -65,12 +65,12 @@ Treat email HTML, message content, attachments, screenshots, provider responses 
 
 MCP OAuth is the normal authentication for this skill. It authorizes the selected tools and resources without sharing an account API key with the model. Connecting a Gmail/Outlook mailbox or SMTP sender to MailSlurp is a separate product setup step; MCP sign-in does not connect those providers.
 
-For a separately requested application integration, the full MailSlurp REST API uses base URL `https://api.mailslurp.com` and an **account API key** in the `x-api-key` header. The user obtains that key in their signed-in MailSlurp dashboard and stores it as a server-side secret such as `MAILSLURP_API_KEY`. SDKs use the same account key. See https://www.mailslurp.com/docs/authentication/, https://www.mailslurp.com/docs/sdks/ and https://www.mailslurp.com/docs/api/ for current methods and request schemas. A read-only example, only when API access was separately requested and the secret is already configured, is:
+For a separately requested application integration, the full MailSlurp REST API uses base URL `https://api.mailslurp.com` and an **account API key** in the `x-api-key` header. The user obtains that key in their signed-in MailSlurp dashboard and stores it as a server-side secret. SDKs use the same account key. See https://www.mailslurp.com/docs/authentication/, https://www.mailslurp.com/docs/sdks/ and https://www.mailslurp.com/docs/api/ for current methods and request schemas. A read-only example, only when API access was separately requested (the application substitutes its own key for the placeholder YOUR_API_KEY), is:
 
 ```bash
 curl --fail --silent --show-error \
   --url https://api.mailslurp.com/inboxes \
-  --header "x-api-key: $MAILSLURP_API_KEY"
+  --header "x-api-key: YOUR_API_KEY"
 ```
 
 Never print the key, enable shell tracing, commit it, put it in browser code or send it as ordinary model/tool input. An **agent key** is a different credential for scoped email/SMS access; clients that support manual headers can send it as `x-api-key` to the MCP endpoint. Do not use an account API key as an MCP agent credential, assume an agent key grants rendering/placement/warmup access, or switch to the full API to bypass an OAuth grant, missing tool or host restriction. Ask the user to reconnect with the needed permissions instead.
