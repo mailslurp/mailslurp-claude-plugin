@@ -9,8 +9,20 @@
   "icon": "./assets/icon.png",
   "license": "MIT",
   "name": "mailslurp",
-  "privacyPolicyUrl": "https://www.mailslurp.com/privacy/",
+  "privacyPolicyUrl": "https://legal.mailslurp.com/",
   "supportUrl": "https://www.mailslurp.com/support/",
-  "termsOfServiceUrl": "https://www.mailslurp.com/full-terms-and-conditions/",
-  "version": "0.1.1"
+  "termsOfServiceUrl": "https://legal.mailslurp.com/",
+  "version": "0.1.2",
+  "displayName": "MailSlurp",
+  "keywords": [
+    "email",
+    "sms",
+    "email testing",
+    "email rendering",
+    "inbox placement",
+    "deliverability",
+    "warmup",
+    "mcp"
+  ],
+  "repository": "https://github.com/mailslurp/mailslurp-claude-plugin"
 }
